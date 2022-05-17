@@ -23,6 +23,13 @@ function playOuch(){
   document.getElementById('ow').play()
 }
 //============
+//Healing Word
+document.querySelector('#healingWord').addEventListener('click', playHealingWord)
+
+function playHealingWord(){
+  document.getElementById('healsAudio').play()
+}
+//============
 //Feather Fall
 document.querySelector('#featherFall').addEventListener('click', playfeatherFall)
 
