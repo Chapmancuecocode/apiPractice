@@ -4,10 +4,10 @@
 
 /* Box Model Hack */
 * {
-    -moz-box-sizing: border-box; /* Firexfox */
-    -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
-    box-sizing: border-box; /* IE */
-    outline: solid red 1px;
+    -moz-box-sizing: inherit; /* Firexfox */
+    -webkit-box-sizing: inherit; /* Safari/Chrome/iOS/Android */
+    box-sizing: inherit; /* IE */
+    /* outline: solid red 1px; */
 }
 
 /* Clear fix hack */
@@ -37,12 +37,17 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
-
+html {
+    font-size: 62.5%;
+}
 body {
     color: #000;
     font-size: 20px;
-    line-height: 1.4;
     font-family: Helvetica, Arial, sans-serif;
+    /* background-color: red; */
+    background: url(/assets/daniela-izotenko-hOhlYhAiizc-unsplash.jpg) no-repeat top center fixed;    
+    background-size: cover;
+    background-position: 0rem -16rem;
 }
 
 
@@ -52,35 +57,38 @@ body {
 h1 {
     text-align: center;
     padding-top: 2vh;
-    font-size: 4em;
+    padding-bottom: 0.8rem;
+    font-size: 6rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-variant: small-caps;
 }
-
-div {
+.container, .headingAndButtons {
     display: flex;
-    justify-content: flex-start;
-    flex-basis: 33%;
-}
-
-aside {
-    flex-basis: 33%;
-}
-#section {
-    flex-basis: 10%;
-}
-
-#buttons {
-    display: flex;
-    justify-items: flex-start;
-    justify-content: space-evenly;
-    width: 90%;
     flex-wrap: wrap;
+    flex: 1 0 20%;
 }
-
+#aside {
+    height: 49rem;
+    flex: 0.8 0;
+    background: url(/assets/bardhalf.jpg) no-repeat center left fixed;
+    background-position: 10rem 13rem;
+}
+#heading {
+    flex: 1 0 40%;
+    text-align: center;
+    padding-top: 5%;
+    /* border-bottom: solid 1px black; */
+    font-weight: bold;
+    text-shadow: 0.5px 0.6px black;
+}
 button {
-    width: 2em;
-    height: 1.4em;
+    flex: 1 0 12%;
+    background-color: rgba(255, 255, 255, 0.379);
+    border: solid 1px rgba(0, 0, 0, 0.8);
+    font-size: 2rem;
+}
+#buttons {
+
 }
 /******************************************
 /* ADDITIONAL STYLES
