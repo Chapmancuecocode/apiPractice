@@ -87,9 +87,12 @@ button {
     border: solid 1px rgba(0, 0, 0, 0.8);
     font-size: 2rem;
 }
-#buttons {
-
+button:hover {
+    background-color: rgba(215, 215, 215, 0.379);
 }
+/* #fourBtn {
+    flex: 1 0 7.4%;
+} */
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
